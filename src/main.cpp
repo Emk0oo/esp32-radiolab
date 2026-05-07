@@ -19,7 +19,7 @@ void esp32S3Boot() {
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
-  delay(1000);
+  delay(2000);
   esp32S3Boot();
   Serial.println("=== Setup done ===");
 }
