@@ -1,4 +1,5 @@
 #include "Boot.h"
+#include "EspNow.h"
 
 namespace boot {
     void begin(uint32_t baud, uint32_t delayMs) { 
@@ -6,6 +7,7 @@ namespace boot {
         delay(delayMs);
         Serial.println("ESP32-S3 booting...");
         printChipInformation();
+        espnow::readMacAddress();
         Serial.println("=== Setup done ===");
 
     }
